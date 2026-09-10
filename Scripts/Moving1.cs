@@ -10,13 +10,15 @@ public class Moving1 : MonoBehaviour
 
     private void Update()
     {
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+
         if (Input.GetKey(upkey))
         {
-            transform.position += new Vector3(0, Velocity1 * Time.deltaTime, 0);
+            GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, Velocity1);
         }
         if (Input.GetKey(downkey))
         {
-            transform.position += new Vector3(0, -Velocity1 * Time.deltaTime, 0);
+            GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, -Velocity1);
         }
     }
 
