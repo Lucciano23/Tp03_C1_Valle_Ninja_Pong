@@ -35,6 +35,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
+            Time.timeScale = pauseMenu.activeSelf ? 0 : 1;
         }
     }
 
@@ -45,6 +46,7 @@ public class PauseMenu : MonoBehaviour
         creditsMenu.SetActive(false);
         SettingsMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        Time.timeScale = 1;
 
     }
 

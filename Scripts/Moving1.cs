@@ -7,9 +7,12 @@ public class Moving1 : MonoBehaviour
     [SerializeField] private KeyCode downkey = KeyCode.S;
 
     public float Velocity1 = 1.0f;
+    
+
 
     private void Update()
     {
+        
         GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
 
         if (Input.GetKey(upkey))
