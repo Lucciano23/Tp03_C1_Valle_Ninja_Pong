@@ -2,8 +2,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace Proyect04
+{
 
-public class SettingPl2 : MonoBehaviour
+    public class SettingPl2 : MonoBehaviour
 {
 
     [SerializeField] private Moving2 Jugador2;
@@ -74,3 +76,6 @@ public class SettingPl2 : MonoBehaviour
     }
 
 }
+
+}
+
