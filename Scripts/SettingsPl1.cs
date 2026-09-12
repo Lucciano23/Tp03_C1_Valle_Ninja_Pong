@@ -13,11 +13,21 @@ public class VelocityPl1 : MonoBehaviour
 
     [SerializeField] private Slider player1Height;
 
+    [SerializeField] private Button ButtonRed1;
+
+    [SerializeField] private Button ButtonBlue1;
+
+    [SerializeField] private Button ButtonGreen1;
+
     [SerializeField] private TMP_Text Player1Speed;
 
     [SerializeField] private TMP_Text Player1Height;
 
     [SerializeField] private Transform TransformPlayer1;
+
+    [SerializeField] private Renderer player1Render;
+
+    
 
     private Vector3 originalscale;
 
@@ -26,7 +36,9 @@ public class VelocityPl1 : MonoBehaviour
     {
         player1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged);
         player1Height.onValueChanged.AddListener(OnPlayer1HeightChanged);
-
+        ButtonRed1.onClick.AddListener(OnRedButtonClicked);
+        ButtonBlue1.onClick.AddListener(OnBlueButtonClicked);
+        ButtonGreen1.onClick.AddListener(OnGreenButtonClicked);
     }
 
     private void Start()
@@ -50,5 +62,20 @@ public class VelocityPl1 : MonoBehaviour
         Player1Height.text = value.ToString("F2");
     }
 
+    private void OnRedButtonClicked()
+    {
+       
+        player1Render.material.color = Color.red;
+    }
+
+    private void OnBlueButtonClicked() 
+    {
+        player1Render.material.color = Color.blue;
+    }
+
+    private void OnGreenButtonClicked()
+    {
+        player1Render.material.color = Color.green;
+    }
 
 }
